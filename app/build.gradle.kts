@@ -35,6 +35,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures{
+        compose =true
+    }
+    composeOptions{
+        kotlinCompilerExtensionVersion= "1.5.15"
+    }
 }
 
 dependencies {
@@ -50,7 +57,9 @@ dependencies {
     //ktx
     implementation ("androidx.fragment:fragment-ktx:1.6.2")
     implementation ("androidx.activity:activity-ktx:1.8.2")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
+
+    implementation("androidx.compose.runtime:runtime-livedata:1.7.3")
 
     //hilt dependencies
     implementation("com.google.dagger:hilt-android:2.51.1")
@@ -70,6 +79,14 @@ dependencies {
 
     //glide
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+
+    // compose
+
+    implementation("androidx.compose.ui:ui:1.7.3") // Replace with the latest version
+    implementation("androidx.compose.material:material:1.7.3") // Replace with the latest version
+    implementation("androidx.compose.ui:ui-tooling:1.7.3") // Optional for previewing UI
+    implementation("androidx.activity:activity-compose:1.9.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.6")
 
 
 

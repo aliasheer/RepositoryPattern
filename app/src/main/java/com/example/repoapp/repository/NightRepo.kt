@@ -10,7 +10,6 @@ import javax.inject.Inject
 
 class NightRepo @Inject constructor( private val offlineDAO: offlineDAO, private val nightlifeDAO: NightlifeDAO) {
 
-
      suspend fun getNightlife() = nightlifeDAO.getNightLife()
 
      suspend fun getLocalNightLife()= offlineDAO.getNightLife()
